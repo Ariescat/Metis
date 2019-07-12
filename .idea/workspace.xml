@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="900407b0-7367-43fa-a0ad-435b6fe20550" name="Default Changelist" comment="" />
+    <list default="true" id="900407b0-7367-43fa-a0ad-435b6fe20550" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/BehaviorTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/BehaviorTreeBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/abs/BaseAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/abs/BaseBehavior.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/abs/BaseComposite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/abs/BaseCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/abs/BaseDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/common/EActionMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/common/EConditionMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/common/EPolicy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/common/EStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/IAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/IBehaviour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/IComposite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/ICondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/IDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/composite/IParallel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/composite/ISelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/ifs/composite/ISequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/action/ActionAttack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/action/ActionPatrol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/action/ActionRunaway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/composite/ParallelImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/composite/SelectorImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/composite/SequenceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/condition/ConditionIsEnemyDead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/condition/ConditionIsHealthLow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/condition/ConditionIsSeeEnemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/decorator/Repeat$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/ai/impl/decorator/Repeat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/siki/AStar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/siki/MyBinaryHeap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/siki/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/behaviorTree/siki/PointUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hotswap/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hotswap/MyClassLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hotswap/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/launcher/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/other/Main.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +67,7 @@
     <session id="-717910720">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -34,41 +78,39 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="10" />
+          <entry key="gitignore" value="1" />
+          <entry key="iml" value="1" />
           <entry key="java" value="79" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="10" />
+          <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="79" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
           <entry key="java" value="568" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="JAVA" value="568" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/operator/and/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,6 +132,9 @@
       <replace />
       <replace>behaviorTree</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
@@ -119,15 +164,17 @@
         <option value="$PROJECT_DIR$/src/main/java/math/_A.java" />
         <option value="$PROJECT_DIR$/src/main/java/operator/and/_A.java" />
         <option value="$PROJECT_DIR$/src/main/java/operator/and/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="532" />
-    <option name="y" value="59" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="182" />
+    <option name="y" value="28" />
     <option name="width" value="1349" />
     <option name="height" value="955" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -140,24 +187,6 @@
               <item name="lqz-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="lqz-test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lqz-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lqz-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lqz-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lqz-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lqz-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lqz-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -167,7 +196,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562578855414" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562588968900" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../akka-quickstart-java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -225,8 +254,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="532" y="59" width="1349" height="955" extended-state="1" />
-    <editor active="true" />
+    <frame x="182" y="28" width="1349" height="955" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49705306" visible="true" weight="0.26454616" />
       <window_info id="Structure" order="1" sideWeight="0.502947" side_tool="true" weight="0.26532194" />
@@ -238,7 +266,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.38002437" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3804878" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -260,15 +288,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/behaviorTree/ai/ifs/composite/ISequence.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/behaviorTree/ai/impl/condition/ConditionIsEnemyDead.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/behaviorTree/ai/ifs/IComposite.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/behaviorTree/ai/impl/composite/SelectorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -597,7 +616,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/operator/and/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lqz-test.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
         </state>
       </provider>
     </entry>
