@@ -24,5 +24,9 @@ public class Main {
         int n = 4;
         int i = n & (n - 1);
         System.err.println(i == 0);
+
+        // 一个f有4位，一个int有32位
+        System.err.println(0x7FFFFFFF);
+        System.err.println(Integer.MAX_VALUE);
     }
 }
