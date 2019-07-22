@@ -1,4 +1,4 @@
-package groovy;
+package script.groovy;
 
 public class Main {
 

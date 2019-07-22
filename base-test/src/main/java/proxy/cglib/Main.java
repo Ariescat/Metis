@@ -6,7 +6,7 @@ import net.sf.cglib.proxy.Enhancer;
 public class Main {
 
     /**
-     * @see https://blog.csdn.net/yhl_jxy/article/details/80633194
+     * @link https://blog.csdn.net/yhl_jxy/article/details/80633194
      */
     public static void main(String[] args) {
         // 代理类class文件存入本地磁盘方便我们反编译查看源码

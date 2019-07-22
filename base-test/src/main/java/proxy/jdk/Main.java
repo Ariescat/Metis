@@ -9,7 +9,7 @@ import static sun.misc.ProxyGenerator.generateProxyClass;
 public class Main {
 
     /**
-     * @see https://www.cnblogs.com/zuidongfeng/p/8735241.html
+     * @link https://www.cnblogs.com/zuidongfeng/p/8735241.html
      */
     public static void main(String[] args) throws Exception {
         // 保存生成的代理类的字节码文件，代理类的字节码内容保存在了项目根目录下，文件名为$Proxy0.class

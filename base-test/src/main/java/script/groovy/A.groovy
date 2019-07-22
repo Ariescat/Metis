@@ -1,4 +1,4 @@
-package groovy
+package script.groovy
 
 System.out.println("hello world")
 System.out.println "hello world"

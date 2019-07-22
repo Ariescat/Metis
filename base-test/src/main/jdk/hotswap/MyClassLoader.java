@@ -18,7 +18,7 @@ public class MyClassLoader extends ClassLoader {
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         String classPath = MyClassLoader.class.getResource("/").getPath(); //得到classpath
-        String fileName = name.replace(".", "/") + ".class";
+        String fileName = name.replace("src/main/java/jdk", "/") + ".class";
         File classFile = new File(classPath, fileName);
         if (!classFile.exists()) {
             throw new ClassNotFoundException(classFile.getPath() + " 不存在");
