@@ -9,7 +9,7 @@ public class TestImmutableMap {
      * <p>
      * 1. 在fromEntryArray里，会判断 <code> bucketSize > MAX_HASH_BUCKET_LENGTH </code> 来返回 JdkBackedImmutableMap 或是 RegularImmutableMap
      * 2. bucketSize是指同个entryIndex里的entry个数，MAX_HASH_BUCKET_LENGTH 为 8
-     * 3. JdkBackedImmutableMap 是用 jdk 的 HashMap 实现的
+     * 3. JdkBackedImmutableMap 是用 jdk 的 HashMap 再包装一层
      * <p>
      * RegularImmutableMap的优化主要是 <code> Hashing.smear(key.hashCode()) & mask </code>, mask为 <code> tableSize - 1 </code>, 把table的容量设置为真实的容量
      * 这里的smear算法有点像高低位扰动（为了散列更均匀，个人想法），这里可回想下jdk7和jdk8的HashMap的hash计算，下面贴了代码
