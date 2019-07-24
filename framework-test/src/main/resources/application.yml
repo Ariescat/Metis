@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka-server
+
+#logging:
+#  pattern:
+#    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+
+server:
+  port: 8761
+
+eureka:
+  server:
+    enableSelfPreservation: false # 本地调试环境下关闭自我保护机制
+  instance:
+    hostname: localhost
+    #prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
