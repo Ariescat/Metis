@@ -37,8 +37,15 @@ public class EurekaServiceApplication {
      *
      *      下面说说 ConfigurationClassPostProcessor：
      *          这个类的作用注释里也有写：Parse each @Configuration class
-     *          这里其实是取出 @Configuration 注解的配置类，也就是 上面registerBeanDefinition的第二步注册进去的sources，然后解析这些配置类，相当于解析以前的xml文件
+     *          这里其实是取出 @Configuration 注解的配置类，也就是 上面registerBeanDefinition的第二步注册进去的sources（spring cloud是这个，springboot是启动类），
+     *          然后解析这些配置类，相当于解析以前的xml文件
      *          ConfigurationClassParser 解析完成后交由 ConfigurationClassBeanDefinitionReader load进去
+     *          ConfigurationClassParser 的 parse 过程中会调用 processDeferredImportSelectors，这时候 AutoConfigurationImportSelector 就上场了
+     *
+     *      AutoConfigurationImportSelector：
+     *          这里会读取 META-INF/spring.factories（sptingcloud中的deferredImports集合为0, 大部分为spring-boot-autoconfigure Jar包）
+     *          的 EnableAutoConfiguration 配置项
+     *
      *
      *      上面流程结束后 springcloud的loadBeanDefinition结束，继续执行springboot的 createApplicationContext，prepareContext，refreshContext，流程同上
      *
