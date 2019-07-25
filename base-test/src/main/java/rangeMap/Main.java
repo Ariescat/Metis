@@ -14,7 +14,8 @@ public class Main {
     }
 
     /**
-     * ImmutableRangeMap由List实现，get则采用二分查找
+     * ImmutableRangeMap 由 List 实现，get 则采用二分查找
+     * TODO 这里的二分查找有点东西，有空看看
      *
      * @see immutable.TestImmutableMap#main 看到这里了，顺便看看ImmutableMap吧
      */
