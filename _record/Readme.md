@@ -8,4 +8,5 @@
     httpclient httpasyncclient
 
 2019年7月29日
-    MongoDB； MySql分库分表，集群
+    MongoDB； MySql分库分表，集群；
+    Session劫持；Session,Token区别
