@@ -25,7 +25,6 @@
     <modules>
         <module>_record</module>
         <module>base-test</module>
-        <module>db</module>
         <module>framework-test</module>
     </modules>
 
