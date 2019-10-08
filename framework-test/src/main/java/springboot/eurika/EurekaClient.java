@@ -1,9 +1,8 @@
-package spring.eurika;
+package springboot.eurika;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * \@EnableDiscoveryClient 这个注解是开启SpringCloud服务发现客户端的注解,

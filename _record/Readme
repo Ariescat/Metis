@@ -15,3 +15,6 @@
     MySql分库分表，集群
     Future
     HashedWheelTimer
+
+2019-10-08
+    Spring自动注入研究 framework-test\src\main\java\spring\autowired\package-info.java
