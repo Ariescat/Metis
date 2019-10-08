@@ -2,6 +2,7 @@ package hotswap;
 
 public class Person {
 
+//    private int i = 3;
     private String name;
 
     public Person() {
@@ -12,6 +13,7 @@ public class Person {
     }
 
     public void sayHello(){
-        System.out.println("hello world!!！");
+        System.out.println("hello world!!~~");
+//        System.err.println(i);
     }
 }
