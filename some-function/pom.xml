@@ -10,6 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>some-function</artifactId>
-
+    <description>某些功能的测试</description>
 
 </project>

@@ -23,7 +23,6 @@
     </build>
 
     <modules>
-        <module>_record</module>
         <module>base-test</module>
         <module>framework-test</module>
         <module>some-function</module>
