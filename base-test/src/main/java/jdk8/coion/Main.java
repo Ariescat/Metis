@@ -59,6 +59,15 @@ public class Main {
             }
         });
         list.stream().map(Integer::byteValue);
+
+        List<Test> list2 = new ArrayList<>();
+        list2.stream().map(new Function<Test, String>() {
+            @Override
+            public String apply(Test test) {
+                return test.desc;
+            }
+        });
+        list2.stream().map(Test::getDesc); // 看，是不是都一样的
     }
 
     static void testFun(Fun f) {
@@ -79,6 +88,10 @@ public class Main {
 
         Test(String desc) {
             this.desc = desc;
+        }
+
+        public String getDesc() {
+            return desc;
         }
 
         // ---------------------- Fun ----------------------
