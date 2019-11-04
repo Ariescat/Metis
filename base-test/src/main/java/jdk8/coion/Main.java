@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.IntConsumer;
+import java.util.stream.IntStream;
 
 public class Main {
 
@@ -64,10 +66,25 @@ public class Main {
         list2.stream().map(new Function<Test, String>() {
             @Override
             public String apply(Test test) {
-                return test.desc;
+                return test.getDesc();
             }
         });
-        list2.stream().map(Test::getDesc); // 看，是不是都一样的
+        list2.stream().map(Test::getDesc); // 看，是不是都一样的，也可以理解成是第一个参数的调用
+
+        IntStream.of(new int[]{1, 2, 3}).forEach(new IntConsumer() {
+            @Override
+            public void accept(int value) {
+                System.out.println(value);
+            }
+        });
+        IntStream.of(new int[]{1, 2, 3}).forEach(value -> System.out.println(value));
+        IntStream.of(new int[]{1, 2, 3}).forEach(System.out::println); // 这里又可以理解成传参
+        IntStream.of(new int[]{1, 2, 3}).forEach(Test::c1);
+
+        /**
+         * 若是调用lambda参数本身，可直接用参数类型::实例方法
+         * 若lambda参数只是传递作用，则匹配参数类型的静态或实例方法
+         */
     }
 
     static void testFun(Fun f) {
@@ -103,7 +120,7 @@ public class Main {
             return 2;
         }
 
-        public int a3(Test o1, Test o2) {
+        int a3(Test o1, Test o2) {
             return 3;
         }
 
@@ -116,7 +133,7 @@ public class Main {
             return 2;
         }
 
-        public int b3(int o1, Test o2) {
+        int b3(int o1, Test o2) {
             return 3;
         }
 
