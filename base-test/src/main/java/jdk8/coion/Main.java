@@ -17,6 +17,14 @@ public class Main {
      */
     public static void main(String[] args) {
         testFun(Test::a1);
+        testFun((o1, o2) -> { return 0; });
+        testFun(new Fun() {
+            @Override
+            public int fun(Test o1, Test o2) {
+                return 0;
+            }
+        });
+
         testFun(Test::a2);
 //        testFun(Test::a3); // 编译不通过
         testFun(new Test("test")::a3);
