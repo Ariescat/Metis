@@ -1,4 +1,4 @@
-package jdk8.coion;
+package jdk8.colon;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,23 +16,36 @@ public class Main {
      * list.sort(Integer::compareTo);
      */
     public static void main(String[] args) {
-        testFun(Test::a1);
-        testFun(Test::a2);
-//        testFun(Test::a3); // 编译不通过
-        testFun(new Test("test")::a3);
+        funtion1(new Fun1() {
+            @Override
+            public int fun(Entity o1, Entity o2) {
+                return o1.testInt(o2);
+            }
+        });
+        funtion1((o1, o2) -> o1.testInt(o2));
+        funtion1(Entity::testInt); // 静态
+        funtion1(Entity::test); // 实例
 
-        testFun2(Test::b1);
-//        testFun2(Test::b2); // 编译不通过
-//        testFun2(Test::b3); // 注意！编译不通过
-        testFun2(new Test("test")::b3);
+        funtion1(TestFun::a1); //  funtion1(Entity::testInt);
+//        funtion1(TestFun::a2); // 编译不通过
+//        funtion1(TestFun::a3); // 编译不通过
+        funtion1(new TestFun("entity")::a3);
 
-        testFun3(Test::c1);
-//        testFun3(Test::c2); // 编译不通过
-        testFun3(new Test("test")::c2);
 
-        testFun4(Test::d1);
-//        testFun4(Test::d2); // 编译不通过
-        testFun4(new Test("test")::d2);
+        funtion2(TestFun::b1);
+//        funtion2(TestFun::b2); // 编译不通过
+//        funtion2(TestFun::b3); // 注意！编译不通过
+        funtion2(new TestFun("entity")::b3);
+
+
+        funtion3(TestFun::c1);
+//        funtion3(TestFun::c2); // 编译不通过
+        funtion3(new TestFun("entity")::c2);
+
+
+        funtion4(TestFun::d1);
+//        funtion4(TestFun::d2); // 编译不通过
+        funtion4(new TestFun("entity")::d2);
 
         /**
          * 因此，猜测 若接口的参数类型一样 可直接用::调用实例方法
@@ -62,14 +75,14 @@ public class Main {
         });
         list.stream().map(Integer::byteValue);
 
-        List<Test> list2 = new ArrayList<>();
-        list2.stream().map(new Function<Test, String>() {
+        List<TestFun> list2 = new ArrayList<>();
+        list2.stream().map(new Function<TestFun, String>() {
             @Override
-            public String apply(Test test) {
+            public String apply(TestFun test) {
                 return test.getDesc();
             }
         });
-        list2.stream().map(Test::getDesc); // 看，是不是都一样的，也可以理解成是第一个参数的调用
+        list2.stream().map(TestFun::getDesc); // 看，是不是都一样的，也可以理解成是第一个参数的调用
 
         IntStream.of(new int[]{1, 2, 3}).forEach(new IntConsumer() {
             @Override
@@ -79,7 +92,7 @@ public class Main {
         });
         IntStream.of(new int[]{1, 2, 3}).forEach(value -> System.out.println(value));
         IntStream.of(new int[]{1, 2, 3}).forEach(System.out::println); // 这里又可以理解成传参
-        IntStream.of(new int[]{1, 2, 3}).forEach(Test::c1);
+        IntStream.of(new int[]{1, 2, 3}).forEach(TestFun::c1);
 
         /**
          * 若是调用lambda参数本身，可直接用参数类型::实例方法
@@ -87,53 +100,56 @@ public class Main {
          */
     }
 
-    static void testFun(Fun f) {
-//        System.err.println(f.fun(new Test("test1"), new Test("test2")));
+    static void funtion1(Fun1 f) {
     }
 
-    static void testFun2(Fun2 f2) {
+    static void funtion2(Fun2 f2) {
     }
 
-    static void testFun3(Fun3 f2) {
+    static void funtion3(Fun3 f2) {
     }
 
-    static void testFun4(Fun4 f2) {
+    static void funtion4(Fun4 f2) {
     }
 
-    static class Test {
+    // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
+
+    static class TestFun {
+
         private String desc;
 
-        Test(String desc) {
+        TestFun(String desc) {
             this.desc = desc;
         }
 
-        public String getDesc() {
+        String getDesc() {
             return desc;
         }
 
-        // ---------------------- Fun ----------------------
-        static int a1(Test o1, Test o2) {
+        static int a1(Entity o1, Entity o2) {
             return 1;
         }
 
-        int a2(Test o) {
+        int a2(Entity o) {
             return 2;
         }
 
-        int a3(Test o1, Test o2) {
+        int a3(Entity o1, Entity o2) {
             return 3;
         }
 
         // ---------------------- Fun2 ----------------------
-        static int b1(int o1, Test o2) {
+        static int b1(int o1, Entity o2) {
             return 1;
         }
 
-        int b2(Test o) {
+        int b2(Entity o) {
             return 2;
         }
 
-        int b3(int o1, Test o2) {
+        int b3(int o1, Entity o2) {
             return 3;
         }
 
@@ -156,18 +172,36 @@ public class Main {
         }
     }
 
-    interface Fun {
+    // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
+
+    static class Entity {
+        static int test(Entity e, Entity e2) {
+            return 3;
+        }
+
+        int testInt(Entity e) {
+            return 2;
+        }
+    }
+
+    // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
+
+    interface Fun1 {
         /**
          * param1与param2 类型一样
          */
-        int fun(Test o1, Test o2);
+        int fun(Entity o1, Entity o2);
     }
 
     interface Fun2 {
         /**
          * param1与param2 类型 不一样
          */
-        int fun(int o1, Test o2);
+        int fun(int o1, Entity o2);
     }
 
     interface Fun3 {
