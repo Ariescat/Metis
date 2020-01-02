@@ -37,6 +37,12 @@
             <artifactId>koloboke-impl-jdk8</artifactId>
             <version>0.6.8</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.49</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
         <!--<dependency>
             <groupId>org.apache.httpcomponents</groupId>
