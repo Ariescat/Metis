@@ -1,8 +1,10 @@
 package script.groovy.withJava;
 
+import base.math.round.Main;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 import org.codehaus.groovy.control.CompilerConfiguration;
+import org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite;
 
 import java.io.File;
 import java.io.IOException;
@@ -109,7 +111,6 @@ public class GroovyClassLoaderApp {
             /**
              * 断点于 {@link script.groovy.withJava.TestGroovy2#print(java.lang.String) } 看不出特别
              * 但可以在此抛出一个异常来查看方法体里面执行过程，会发现方法里面若有其他引用的调用 都是基于 Callsite 的调用：callConstructor, callCurrent
-             *
              * ep：
              * java.lang.RuntimeException: pppp
              * 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -121,6 +122,21 @@ public class GroovyClassLoaderApp {
              * 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
              * 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
              * 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+             *
+             *
+             * 方法内部调用可能有优化:
+             *         if (!__$stMC && !BytecodeInterface8.disabledStandardMetaClass()) {
+             *             this.testCall();
+             *             Object var10000 = null;
+             *         } else {
+             *             var2[2].callCurrent(this);
+             *         }
+             *
+             * 断点于 {@link Main#main(java.lang.String[])}, 发现调用外部类还是JDK Method反射调用
+             *
+             * 百度 groovy CallSite，可以看到，虽然提供了很高的灵活性(动态调用)，但是也牺牲了一部分性能
+             * 但 groovy dgm 为大部分的热点代码(几百上千个热点) 做了直接调用的优化 {@link PogoMetaMethodSite#invoke}
+             *
              */
             ITestGroovy2 groovyObject = (ITestGroovy2) object;
             groovyObject.print("hello word!!!!");
