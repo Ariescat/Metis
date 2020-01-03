@@ -8,10 +8,10 @@ public class TestGroovy2 implements ITestGroovy2 {
     public void print(String msg) {
         System.out.println(msg);
 
-        // µ÷ÓÃ±¾Àà·½·¨
+        // è°ƒç”¨æœ¬ç±»æ–¹æ³•
 //        testCall();
 
-        // µ÷ÓÃÆäËûÀà·½·¨
+        // è°ƒç”¨å…¶ä»–ç±»æ–¹æ³•
         Main.main(null);
     }
 

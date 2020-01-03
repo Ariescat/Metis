@@ -14,11 +14,11 @@ public class GroovyClassLoaderApp {
 
     /**
      * <p>
-     * Ö¸¶¨Êä³öÄ¿Â¼
+     * æŒ‡å®šè¾“å‡ºç›®å½•
      * JVM args: -Dgroovy.target.directory=D:\GitHubProjects\Metis\base-test\src\main\java\script\groovy\withJava\target
      * <p>
-     * µ«·´±àÒë³öÀ´µÄÎÄ¼şÒş²ØÁË²¿·ÖĞÅÏ¢
-     * ÓÃ Arthas µÄ jad ÃüÁî¾ÍÄÜºÜºÃµÄÕ¹ÏÖ³öÀ´
+     * ä½†åç¼–è¯‘å‡ºæ¥çš„æ–‡ä»¶éšè—äº†éƒ¨åˆ†ä¿¡æ¯
+     * ç”¨ Arthas çš„ jad å‘½ä»¤å°±èƒ½å¾ˆå¥½çš„å±•ç°å‡ºæ¥
      */
     public static void main(String[] args) throws InterruptedException {
 //        loadClass();
@@ -26,7 +26,7 @@ public class GroovyClassLoaderApp {
 //        loadFile();
         loadInterfaceFile();
 
-        // ±ãÓÚ arthas ¼à¿Ø
+        // ä¾¿äº arthas ç›‘æ§
         while (true) {
             Thread.sleep(2000L);
             System.err.println("arthas...");
@@ -34,27 +34,27 @@ public class GroovyClassLoaderApp {
     }
 
     /**
-     * Í¨¹ıÀà¼ÓÔØgroovy
+     * é€šè¿‡ç±»åŠ è½½groovy
      */
     private static void loadClass() {
         GroovyObject groovyObject = null;
         try {
             /**
-             * »áÅ× java.lang.ClassCastException: script.groovy.withJava.TestGroovy cannot be cast to groovy.lang.GroovyObject
+             * ä¼šæŠ› java.lang.ClassCastException: script.groovy.withJava.TestGroovy cannot be cast to groovy.lang.GroovyObject
              *
-             * ²Â²â ClassLoader µ¼ÖÂ
+             * çŒœæµ‹ ClassLoader å¯¼è‡´
              */
             groovyObject = (GroovyObject) GroovyClassLoaderApp.class.getClassLoader().loadClass("script.groovy.withJava.TestGroovy").newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-        // Ö´ĞĞÎŞ²Îº¯Êı
+        // æ‰§è¡Œæ— å‚å‡½æ•°
         groovyObject.invokeMethod("print", null);
 
         System.out.println("============================");
 
-        // Ö´ĞĞÓĞ²Îº¯Êı
+        // æ‰§è¡Œæœ‰å‚å‡½æ•°
         Object[] objects = new Object[]{"abc", "def", "ghi"};
         @SuppressWarnings("unchecked")
         List<String> ls = (List<String>) groovyObject.invokeMethod("printArgs", objects);
@@ -65,18 +65,18 @@ public class GroovyClassLoaderApp {
     private static Object getGroovyObject(String path) throws IOException, InstantiationException, IllegalAccessException {
         CompilerConfiguration config = new CompilerConfiguration();
         config.setSourceEncoding("UTF-8");
-        // ÉèÖÃ¸ÃGroovyClassLoaderµÄ¸¸ClassLoaderÎªµ±Ç°Ïß³ÌµÄ¼ÓÔØÆ÷(Ä¬ÈÏ)
+        // è®¾ç½®è¯¥GroovyClassLoaderçš„çˆ¶ClassLoaderä¸ºå½“å‰çº¿ç¨‹çš„åŠ è½½å™¨(é»˜è®¤)
         GroovyClassLoader groovyClassLoader = new GroovyClassLoader(Thread.currentThread().getContextClassLoader(), config);
 
-        // »ñµÃTestGroovy¼ÓÔØºóµÄclass
+        // è·å¾—TestGroovyåŠ è½½åçš„class
         File groovyFile = new File(path);
         Class<?> groovyClass = groovyClassLoader.parseClass(groovyFile);
-        // »ñµÃTestGroovyµÄÊµÀı
+        // è·å¾—TestGroovyçš„å®ä¾‹
         return groovyClass.newInstance();
     }
 
     /**
-     * Í¨¹ıÎÄ¼şÂ·¾¶¼ÓÔØgroovy
+     * é€šè¿‡æ–‡ä»¶è·¯å¾„åŠ è½½groovy
      *
      * @return
      */
@@ -84,11 +84,11 @@ public class GroovyClassLoaderApp {
         try {
             GroovyObject groovyObject = (GroovyObject) getGroovyObject("D:\\GitHubProjects\\Metis\\base-test\\src\\main\\java\\script\\groovy\\withJava\\TestGroovy.java");
 
-            // ·´Éäµ÷ÓÃprintArgs·½·¨µÃµ½·µ»ØÖµ
+            // åå°„è°ƒç”¨printArgsæ–¹æ³•å¾—åˆ°è¿”å›å€¼
             /**
-             * {@link org.codehaus.groovy.reflection.CachedClass#methods } ÕâÀï»º´æÁËËùÓĞµÄ Method
-             * ¶ÏµãÓÚ {@link groovy.lang.MetaClassImpl#initialize()#fillMethodIndex() } ·¢ÏÖÔÚ´Ë¹¹½¨MethodË÷Òı£ºaddInterfaceMethods, populateMethods
-             * ×îÖÕÖ»ÊÇ·´Éäµ÷ÓÃÁËJDKµÄMethod
+             * {@link org.codehaus.groovy.reflection.CachedClass#methods } è¿™é‡Œç¼“å­˜äº†æ‰€æœ‰çš„ Method
+             * æ–­ç‚¹äº {@link groovy.lang.MetaClassImpl#initialize()#fillMethodIndex() } å‘ç°åœ¨æ­¤æ„å»ºMethodç´¢å¼•ï¼šaddInterfaceMethods, populateMethods
+             * æœ€ç»ˆåªæ˜¯åå°„è°ƒç”¨äº†JDKçš„Method
              */
             @SuppressWarnings("unchecked")
             List<String> result = (List<String>) groovyObject.invokeMethod("printArgs", new Object[]{"chy", "zjj", "xxx"});
@@ -109,9 +109,9 @@ public class GroovyClassLoaderApp {
 //            TestGroovy2 groovyObject = (TestGroovy2) object;
 
             /**
-             * ¶ÏµãÓÚ {@link script.groovy.withJava.TestGroovy2#print(java.lang.String) } ¿´²»³öÌØ±ğ
-             * µ«¿ÉÒÔÔÚ´ËÅ×³öÒ»¸öÒì³£À´²é¿´·½·¨ÌåÀïÃæÖ´ĞĞ¹ı³Ì£¬»á·¢ÏÖ·½·¨ÀïÃæÈôÓĞÆäËûÒıÓÃµÄµ÷ÓÃ ¶¼ÊÇ»ùÓÚ Callsite µÄµ÷ÓÃ£ºcallConstructor, callCurrent
-             * ep£º
+             * æ–­ç‚¹äº {@link script.groovy.withJava.TestGroovy2#print(java.lang.String) } çœ‹ä¸å‡ºç‰¹åˆ«
+             * ä½†å¯ä»¥åœ¨æ­¤æŠ›å‡ºä¸€ä¸ªå¼‚å¸¸æ¥æŸ¥çœ‹æ–¹æ³•ä½“é‡Œé¢æ‰§è¡Œè¿‡ç¨‹ï¼Œä¼šå‘ç°æ–¹æ³•é‡Œé¢è‹¥æœ‰å…¶ä»–å¼•ç”¨çš„è°ƒç”¨ éƒ½æ˜¯åŸºäº Callsite çš„è°ƒç”¨ï¼šcallConstructor, callCurrent
+             * epï¼š
              * java.lang.RuntimeException: pppp
              * 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
              * 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -124,7 +124,7 @@ public class GroovyClassLoaderApp {
              * 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
              *
              *
-             * ·½·¨ÄÚ²¿µ÷ÓÃ¿ÉÄÜÓĞÓÅ»¯:
+             * æ–¹æ³•å†…éƒ¨è°ƒç”¨å¯èƒ½æœ‰ä¼˜åŒ–:
              *         if (!__$stMC && !BytecodeInterface8.disabledStandardMetaClass()) {
              *             this.testCall();
              *             Object var10000 = null;
@@ -132,10 +132,10 @@ public class GroovyClassLoaderApp {
              *             var2[2].callCurrent(this);
              *         }
              *
-             * ¶ÏµãÓÚ {@link Main#main(java.lang.String[])}, ·¢ÏÖµ÷ÓÃÍâ²¿Àà»¹ÊÇJDK Method·´Éäµ÷ÓÃ
+             * æ–­ç‚¹äº {@link Main#main(java.lang.String[])}, å‘ç°è°ƒç”¨å¤–éƒ¨ç±»è¿˜æ˜¯JDK Methodåå°„è°ƒç”¨
              *
-             * °Ù¶È groovy CallSite£¬¿ÉÒÔ¿´µ½£¬ËäÈ»Ìá¹©ÁËºÜ¸ßµÄÁé»îĞÔ(¶¯Ì¬µ÷ÓÃ)£¬µ«ÊÇÒ²ÎşÉüÁËÒ»²¿·ÖĞÔÄÜ
-             * µ« groovy dgm Îª´ó²¿·ÖµÄÈÈµã´úÂë(¼¸°ÙÉÏÇ§¸öÈÈµã) ×öÁËÖ±½Óµ÷ÓÃµÄÓÅ»¯ {@link PogoMetaMethodSite#invoke}
+             * ç™¾åº¦ groovy CallSiteï¼Œå¯ä»¥çœ‹åˆ°ï¼Œè™½ç„¶æä¾›äº†å¾ˆé«˜çš„çµæ´»æ€§(åŠ¨æ€è°ƒç”¨)ï¼Œä½†æ˜¯ä¹Ÿç‰ºç‰²äº†ä¸€éƒ¨åˆ†æ€§èƒ½
+             * ä½† groovy dgm ä¸ºå¤§éƒ¨åˆ†çš„çƒ­ç‚¹ä»£ç (å‡ ç™¾ä¸Šåƒä¸ªçƒ­ç‚¹) åšäº†ç›´æ¥è°ƒç”¨çš„ä¼˜åŒ– {@link PogoMetaMethodSite#invoke}
              *
              */
             ITestGroovy2 groovyObject = (ITestGroovy2) object;
