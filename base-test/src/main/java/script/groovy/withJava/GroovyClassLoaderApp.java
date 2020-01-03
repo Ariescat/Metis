@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * groovy版本：2.5.7
+ */
 public class GroovyClassLoaderApp {
 
     /**
@@ -63,13 +66,16 @@ public class GroovyClassLoaderApp {
 
 
     private static Object getGroovyObject(String path) throws IOException, InstantiationException, IllegalAccessException {
+        String userDir = System.getProperty("user.dir");
+
         CompilerConfiguration config = new CompilerConfiguration();
         config.setSourceEncoding("UTF-8");
+        config.setTargetDirectory(userDir + "\\base-test\\src\\main\\java\\script\\groovy\\withJava\\target");
         // 设置该GroovyClassLoader的父ClassLoader为当前线程的加载器(默认)
         GroovyClassLoader groovyClassLoader = new GroovyClassLoader(Thread.currentThread().getContextClassLoader(), config);
 
         // 获得TestGroovy加载后的class
-        File groovyFile = new File(path);
+        File groovyFile = new File(userDir + path);
         Class<?> groovyClass = groovyClassLoader.parseClass(groovyFile);
         // 获得TestGroovy的实例
         return groovyClass.newInstance();
@@ -82,7 +88,7 @@ public class GroovyClassLoaderApp {
      */
     private static void loadFile() {
         try {
-            GroovyObject groovyObject = (GroovyObject) getGroovyObject("D:\\GitHubProjects\\Metis\\base-test\\src\\main\\java\\script\\groovy\\withJava\\TestGroovy.java");
+            GroovyObject groovyObject = (GroovyObject) getGroovyObject("\\base-test\\src\\main\\java\\script\\groovy\\withJava\\TestGroovy.java");
 
             // 反射调用printArgs方法得到返回值
             /**
@@ -101,7 +107,7 @@ public class GroovyClassLoaderApp {
 
     private static void loadInterfaceFile() {
         try {
-            Object object = getGroovyObject("D:\\GitHubProjects\\Metis\\base-test\\src\\main\\java\\script\\groovy\\withJava\\TestGroovy2.java");
+            Object object = getGroovyObject("\\base-test\\src\\main\\java\\script\\groovy\\withJava\\TestGroovy2.java");
 
             /**
              * java.lang.ClassCastException: script.groovy.withJava.TestGroovy2 cannot be cast to script.groovy.withJava.TestGroovy2
@@ -133,10 +139,34 @@ public class GroovyClassLoaderApp {
              *         }
              *
              * 断点于 {@link Main#main(java.lang.String[])}, 发现调用外部类还是JDK Method反射调用
+             *   at base.math.round.Main.main(Main.java:10)
+             *   at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+             *   at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+             *   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+             *   at java.lang.reflect.Method.invoke(Method.java:498)
+             *   at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+             *   at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+             *   at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.invoke(StaticMetaMethodSite.java:44)
+             *   at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:89)
+             *   at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+             *   at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+             *   at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+             *   at script.groovy.withJava.TestGroovy2.print(TestGroovy2.java:15)
+             *
              *
              * 百度 groovy CallSite，可以看到，虽然提供了很高的灵活性(动态调用)，但是也牺牲了一部分性能
              * 但 groovy dgm 为大部分的热点代码(几百上千个热点) 做了直接调用的优化 {@link PogoMetaMethodSite#invoke}
              *
+             *
+             * 附 online exception 这里有一个配置实体为null，看底层的null处理 (2.1.3 版本)：
+             *  java.lang.NullPointerException: Cannot invoke method getKillMonsterValue() on null object
+             *  	at org.codehaus.groovy.runtime.NullObject.invokeMethod(NullObject.java:77)
+             *  	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+             *  	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+             *  	at org.codehaus.groovy.runtime.callsite.NullCallSite.call(NullCallSite.java:32)
+             *  	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+             *  	at com.mmorpg.logic.mindmagic.config.ConfigMindMagicModel$getKillMonsterValue.call(Unknown Source)
+             *  	at com.mmorpg.logic.mindmagic.MindMagicService.onOneKillMonster(MindMagicService:260)
              */
             ITestGroovy2 groovyObject = (ITestGroovy2) object;
             groovyObject.print("hello word!!!!");
