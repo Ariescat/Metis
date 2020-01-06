@@ -8,6 +8,9 @@ public class TestGroovy2 implements ITestGroovy2 {
     public void print(String msg) {
         System.out.println(msg);
 
+        // 直接抛出异常
+//        throw new RuntimeException("pppp");
+
         // 调用本类方法
 //        testCall();
 
