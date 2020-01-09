@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Main {
+public class TestRedPacket {
     private static final DecimalFormat FORMAT = new DecimalFormat("######.##");
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
+        redpacket();
+    }
+
+    private static void redpacket() {
         List<String> redPackage = getRedPackage(10, 20, 0.3);
         for (String red : redPackage) {
             System.out.println(red);
