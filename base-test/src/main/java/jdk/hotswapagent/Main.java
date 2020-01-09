@@ -3,7 +3,7 @@ package jdk.hotswapagent;
 import jdk.hotswap.Person;
 
 /**
- * -XXaltjvm=dcevm -javaagent:C:\Users\毒豆芽\Desktop\hotswap-agent-1.3.0.jar
+ * -XXaltjvm=dcevm -javaagent:libs\hotswap-agent-1.3.0.jar
  *
  * @author Ariescat
  * @version 2020/1/7 20:00
