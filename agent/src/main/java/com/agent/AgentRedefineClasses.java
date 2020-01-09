@@ -26,12 +26,12 @@ public class AgentRedefineClasses {
 
         System.err.println("find Person");
 
-        String pathname = "C:\\LQZ_Projects\\Idea_Projects\\Metis\\base-test\\target\\classes\\jdk\\hotswap\\agentmain\\Person.class";
+        String pathname = "C:\\LQZ_Projects\\Idea_Projects\\Metis\\base-test\\target\\classes\\jdk\\hotswap\\Person.class";
         File file = new File(pathname);
         try {
             byte[] bytes = fileToBytes(file);
             System.out.println("文件大小：" + bytes.length);
-            Class<?> clazz = Class.forName("jdk.hotswapInAgent.Person");
+            Class<?> clazz = Class.forName("jdk.hotswap.Person");
             ClassDefinition classDefinition = new ClassDefinition(clazz, bytes);
             System.out.println("转换代码 -> " + file.getName());
             inst.redefineClasses(classDefinition);

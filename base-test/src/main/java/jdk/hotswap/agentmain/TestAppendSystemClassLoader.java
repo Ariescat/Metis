@@ -5,10 +5,16 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 /**
+ * 将某个jar加入到Classpath里供AppClassloard去加载。
+ *
  * @author Ariescat
  * @version 2020/1/9 17:14
  */
 public class TestAppendSystemClassLoader {
+
+    /**
+     * 测试程序启动后加载外部jar包，如 抢红包 这个模块
+     */
     public static void main(String[] args) throws Exception {
         new Thread(() -> {
             while (true) {

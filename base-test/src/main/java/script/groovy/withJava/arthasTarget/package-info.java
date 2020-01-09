@@ -1,5 +1,5 @@
 /**
- * arthas jad ·´±àÒëÎÄ¼ş
+ * arthas jad åç¼–è¯‘æ–‡ä»¶
  * <p>
  * jad script.groovy.withJava.TestGroovy2 > ./GTestGroovy2.java
  */

@@ -1,5 +1,5 @@
 /**
- * ×Ö½ÚÂëÎÄ¼ş
+ * å­—èŠ‚ç æ–‡ä»¶
  * <p>
  * {@link script.groovy.withJava.GroovyClassLoaderApp#main(java.lang.String[])}
  */

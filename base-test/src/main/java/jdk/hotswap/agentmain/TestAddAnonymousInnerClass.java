@@ -6,20 +6,22 @@ import java.lang.management.ManagementFactory;
 
 /**
  * @author Ariescat
- * @version 2020/1/7 20:00
+ * @version 2020/1/9 18:03
  */
-public class TestRedefineClasses {
+public class TestAddAnonymousInnerClass {
 
     /**
-     * 测试修改类内容 进行热更 目前是方法级别的修改
+     * 测试Person list 方法 增加一个内部类
+     *
+     * 思路：打一个新的jar包，把新的jar包路径 appendToSystemClassLoaderSearch，然后 redefineClasses
      */
     public static void main(String[] args) throws Exception {
-        Person p = new Person();  //内存只有一个实例对象
         new Thread(() -> {
             while (true) {
                 try {
-                    Thread.sleep(2500);
-                    p.sayHello();
+                    Thread.sleep(500);
+
+                    new Person().list();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -27,9 +29,13 @@ public class TestRedefineClasses {
         }
         ).start();
 
+        Thread.sleep(20000);
+
         String name = ManagementFactory.getRuntimeMXBean().getName();
         //这里为了方便测试，打印出来进程id
         String pid = name.split("@")[0];
         System.err.println(pid);
+
+        LoadAgent.loadAgent(pid);
     }
 }

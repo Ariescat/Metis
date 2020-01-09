@@ -24,6 +24,7 @@
             <version>3.20.0-GA</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -40,7 +41,8 @@
                             <!-- 启动后附加启动agent需要这个 -->
                             <!--<Agent-Class>com.agent.AgentRedefineClasses</Agent-Class>-->
                             <!--<Agent-Class>com.agent.AgentAppendSystemClassLoader</Agent-Class>-->
-                            <Agent-Class>com.agent.AgentTransformer</Agent-Class>
+                            <!--<Agent-Class>com.agent.AgentTransformer</Agent-Class>-->
+                            <Agent-Class>com.agent.AgentAddAnonymousInnerClass</Agent-Class>
                             <!-- 是否可以重新转换类 -->
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                             <!-- 是否可以重新定义类 -->

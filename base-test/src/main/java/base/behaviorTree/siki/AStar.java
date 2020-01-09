@@ -1,7 +1,5 @@
 package base.behaviorTree.siki;
 
-import com.sun.istack.internal.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -216,7 +214,7 @@ public class AStar {
      * @param end
      * @return
      */
-    public float calcH(@NotNull Point start, @NotNull Point end) {
+    public float calcH(Point start, Point end) {
         return Math.abs(end.getX() - start.getX()) + Math.abs(end.getY() - start.getY());
     }
 
@@ -229,7 +227,7 @@ public class AStar {
      * @param parent
      * @return
      */
-    public float calcG(@NotNull Point start, @NotNull Point parent) {
+    public float calcG( Point start,  Point parent) {
         float g = 0;
         if (start.getParent() == null) {
             g = 0;
