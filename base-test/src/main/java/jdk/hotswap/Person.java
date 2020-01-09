@@ -14,6 +14,7 @@ public class Person {
 
     public void sayHello(){
         System.out.println("hello world!!~~");
+//        System.out.println("233456");
 //        System.err.println(i);
     }
 }

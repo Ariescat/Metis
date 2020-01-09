@@ -1,4 +1,6 @@
-package jdk.hotswap;
+package jdk.hotswap.myclassloader;
+
+import jdk.hotswap.Person;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;

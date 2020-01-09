@@ -5,4 +5,4 @@
  * @author Ariescat
  * @version 2020/1/7 19:59
  */
-package jdk.hotswapagent;
+package jdk.hotswap.github.hotswapagent;

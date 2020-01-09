@@ -1,5 +1,4 @@
-package jdk.hotswap;
-
+package jdk.hotswap.myclassloader;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
