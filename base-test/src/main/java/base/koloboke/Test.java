@@ -1,9 +1,9 @@
 package base.koloboke;
 
-import net.openhft.koloboke.collect.map.hash.HashIntObjMap;
-import net.openhft.koloboke.collect.map.hash.HashIntObjMaps;
-import net.openhft.koloboke.collect.map.hash.HashObjObjMap;
-import net.openhft.koloboke.collect.map.hash.HashObjObjMaps;
+import com.koloboke.collect.map.hash.HashIntObjMap;
+import com.koloboke.collect.map.hash.HashIntObjMaps;
+import com.koloboke.collect.map.hash.HashObjObjMap;
+import com.koloboke.collect.map.hash.HashObjObjMaps;
 
 import java.util.HashMap;
 import java.util.Map;
