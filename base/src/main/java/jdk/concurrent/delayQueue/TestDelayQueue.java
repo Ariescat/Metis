@@ -1,4 +1,4 @@
-package delayQueue;
+package jdk.concurrent.delayQueue;
 
 import java.util.Random;
 import java.util.concurrent.DelayQueue;

@@ -9,8 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>framework-test</artifactId>
+    <artifactId>framework</artifactId>
+    <packaging>pom</packaging>
     <description>框架的用法与测试</description>
+    <modules>
+        <module>spring</module>
+        <module>spring-boot</module>
+        <module>spring-cloud</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,27 +43,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.metis</groupId>
-            <artifactId>base</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
-        </dependency>
-
-        <!-- eureka server -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-        </dependency>
-
-        <!-- 热启动，热部署依赖包，为了调试方便，加入此包 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <version>2.0.0.RELEASE</version>
-            <optional>true</optional>
         </dependency>
 
         <dependency>
@@ -65,18 +52,5 @@
             <artifactId>netty-all</artifactId>
         </dependency>
     </dependencies>
-
-    <!-- spring cloud dependencies -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Edgware.SR3</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 </project>

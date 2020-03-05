@@ -1,27 +1,27 @@
 # Metis
  
-Metis Õâ¸öÃû×ÖÈ¡×ÔÏ£À°Éñ»°ÖĞµÄÖÇ»ÛÅ®ÉñÄ«ÌáË¹£¨Metis£©£¬ËüÊÇÒ»ÏµÁĞ´úÂë¡¢µÚÈı·½¹¤¾ß¡¢¿ò¼ÜµÄÓÃ·¨ÓëÊ¹ÓÃĞÄµÃ¡£
+Metis è¿™ä¸ªåå­—å–è‡ªå¸Œè…Šç¥è¯ä¸­çš„æ™ºæ…§å¥³ç¥å¢¨ææ–¯ï¼ˆMetisï¼‰ï¼Œå®ƒæ˜¯ä¸€ç³»åˆ—ä»£ç ã€ç¬¬ä¸‰æ–¹å·¥å…·ã€æ¡†æ¶çš„ç”¨æ³•ä¸ä½¿ç”¨å¿ƒå¾—ã€‚
 
 
 ### Records
 
 2019-10-08
-    Spring×Ô¶¯×¢ÈëÑĞ¾¿ framework-test\src\main\java\spring\autowired\package-info.java
+    Springè‡ªåŠ¨æ³¨å…¥ç ”ç©¶ framework\spring\src\main\java\spring\autowired\package-info.java
     
-2019Äê7ÔÂ29ÈÕ
+2019å¹´7æœˆ29æ—¥
     MongoDB
     memcache
-        Session½Ù³Ö£»Session,TokenÇø±ğ
+        SessionåŠ«æŒï¼›Session,TokenåŒºåˆ«
     Redis
-    MySql·Ö¿â·Ö±í£¬¼¯Èº
+    MySqlåˆ†åº“åˆ†è¡¨ï¼Œé›†ç¾¤
     Future
     HashedWheelTimer
     
-2019Äê7ÔÂ29ÈÕ
+2019å¹´7æœˆ29æ—¥
     httpclient httpasyncclient
     
-2019Äê7ÔÂ26ÈÕ
+2019å¹´7æœˆ26æ—¥
     CocosCreator
     
-2019Äê7ÔÂ25ÈÕ
+2019å¹´7æœˆ25æ—¥
     Spring Boot; Spring Cloud; Eureka

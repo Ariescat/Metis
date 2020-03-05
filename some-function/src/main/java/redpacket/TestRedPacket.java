@@ -1,4 +1,4 @@
-package redPacket;
+package redpacket;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

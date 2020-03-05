@@ -27,11 +27,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun</groupId>
-            <artifactId>tools</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
         </dependency>
