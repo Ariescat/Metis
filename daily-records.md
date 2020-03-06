@@ -22,7 +22,9 @@
 
 #### daily-records
 
-logfactory 如何选取log的实现（logback，logj2（**Disruptor**））
+- logfactory 如何选取log的实现（logback，logj2（**Disruptor**））
+- [Java中的零拷贝](https://www.jianshu.com/p/2fd2f03b4cc3)
+- spring aop
 
 
 
