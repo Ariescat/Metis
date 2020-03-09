@@ -14,16 +14,22 @@
   ReferenceCounted
 
 - 3.5
-  Srping Cache @Cacheable和@CacheEvict
+  ~~Srping Cache @Cacheable和@CacheEvict~~
 
+- 3.9
+
+  《JavaGuide面试突击版 (1).pdf》
   
+  **有个大疑问？为什么平台无关性要靠.class，.java不也可以平台无关性吗？**
+  
+  Spring @Order和Ordered接口
 
 
 
 #### daily-records
 
 - logfactory 如何选取log的实现（logback，logj2（**Disruptor**））
-- [Java中的零拷贝](https://www.jianshu.com/p/2fd2f03b4cc3)
+- ~~[Java中的零拷贝](https://www.jianshu.com/p/2fd2f03b4cc3)~~
 - spring aop
 
 
