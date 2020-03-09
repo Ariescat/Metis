@@ -22,7 +22,7 @@
   
   **有个大疑问？为什么平台无关性要靠.class，.java不也可以平台无关性吗？**
   
-  Spring @Order和Ordered接口
+  Spring @Order和Ordered接口 [浅谈Spring @Order注解的使用](https://www.cnblogs.com/muxi0407/p/11611098.html)
 
 
 
