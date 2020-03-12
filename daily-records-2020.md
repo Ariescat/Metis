@@ -22,7 +22,7 @@
   
   **有个大疑问？为什么平台无关性要靠.class，.java不也可以平台无关性吗？**
   
-  Spring @Order和Ordered接口 [浅谈Spring @Order注解的使用](https://www.cnblogs.com/muxi0407/p/11611098.html)
+  ~~Spring @Order和Ordered接口 [浅谈Spring @Order注解的使用](https://www.cnblogs.com/muxi0407/p/11611098.html)~~
 
 
 
@@ -30,7 +30,7 @@
 
 - logfactory 如何选取log的实现（logback，logj2（**Disruptor**））
 - ~~[Java中的零拷贝](https://www.jianshu.com/p/2fd2f03b4cc3)~~
-- spring aop
+- ~~spring aop~~
 
 
 
@@ -50,17 +50,17 @@
 
 - 目标
 
-  hotswapagent
+  ~~hotswapagent~~
 
-  匿名内部类加载
+  ~~匿名内部类加载~~
 
-  动态加载非classpath下的class
+  ~~动态加载非classpath下的class~~
 
 - 待研究
 
-  groovy 是怎么做到动态编译的
+  ~~groovy 是怎么做到动态编译的~~
 
-  java动态编译技术 能否热更新
+  ~~java动态编译技术 能否热更新~~
 
 
 
