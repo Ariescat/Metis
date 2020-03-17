@@ -1,4 +1,4 @@
-package base.proxy.cglib;
+package com.metis.proxy.cglib;
 
 import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Enhancer;

@@ -1,6 +1,6 @@
 package com.metis.groovy.withJava;
 
-import base.math.round.Main;
+import com.metis.base.math.round.Main;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 import org.codehaus.groovy.control.CompilerConfiguration;

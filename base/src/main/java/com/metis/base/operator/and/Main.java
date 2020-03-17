@@ -1,4 +1,4 @@
-package base.operator.and;
+package com.metis.base.operator.and;
 
 /**
  * 数据结构与算法中有那些奇技淫巧？

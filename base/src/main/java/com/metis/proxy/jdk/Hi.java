@@ -1,4 +1,4 @@
-package base.proxy.jdk;
+package com.metis.proxy.jdk;
 
 public class Hi implements IHi {
 

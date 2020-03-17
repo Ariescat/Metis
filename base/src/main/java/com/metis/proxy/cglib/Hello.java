@@ -1,4 +1,4 @@
-package base.proxy.cglib;
+package com.metis.proxy.cglib;
 
 public class Hello {
 

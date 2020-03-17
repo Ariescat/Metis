@@ -1,4 +1,4 @@
-package base.proxy.cglib;
+package com.metis.proxy.cglib;
 
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

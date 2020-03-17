@@ -1,4 +1,4 @@
-package base.proxy.jdk;
+package com.metis.proxy.jdk;
 
 import java.io.FileOutputStream;
 import java.lang.reflect.InvocationHandler;

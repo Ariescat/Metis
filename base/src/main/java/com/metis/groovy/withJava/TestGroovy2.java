@@ -1,6 +1,6 @@
 package com.metis.groovy.withJava;
 
-import base.math.round.Main;
+import com.metis.base.math.round.Main;
 
 public class TestGroovy2 implements ITestGroovy2 {
 
