@@ -1,6 +1,9 @@
 package com.metis.io.iostream;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -13,15 +16,18 @@ public class Test {
     public static void main(String[] args) throws URISyntaxException, IOException {
         URL url = Test.class.getResource("/test-iostream.txt");
         File file = new File(url.toURI());
-        if(file.exists()) {
+        if (file.exists()) {
             System.err.println(file.getAbsolutePath());
 
             FileReader fileReader = new FileReader(file);
 //            fileReader.read()
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String s = bufferedReader.readLine();
+            System.err.println(s + " " + s.length());
+
+            bufferedReader.readLine();
+            s = bufferedReader.readLine();
             System.err.println(s);
-            System.err.println(s.length());
         }
     }
 }
