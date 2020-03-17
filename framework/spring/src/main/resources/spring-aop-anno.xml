@@ -7,8 +7,8 @@
 	   				       http://www.springframework.org/schema/aop
 						   http://www.springframework.org/schema/aop/spring-aop.xsd ">
 
-    <bean id="human" class="spring.aop.advisor.Human"/>
+    <bean id="human" class="com.metis.spring.aop.advisor.Human"/>
 
-    <bean id="sleepHelperAspect" class="spring.aop.anno.SleepHelperAnno"/>
+    <bean id="sleepHelperAspect" class="com.metis.spring.aop.anno.SleepHelperAnno"/>
 
 </beans>

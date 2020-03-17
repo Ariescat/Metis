@@ -13,7 +13,7 @@ Location:
  * 
  * Could not load the following classes:
  *  base.math.round.Main
- *  script.groovy.withJava.ITestGroovy2
+ *  com.metis.groovy.withJava.ITestGroovy2
  */
 package script.groovy.withJava;
 

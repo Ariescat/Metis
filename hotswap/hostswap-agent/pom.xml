@@ -29,7 +29,7 @@
                             <!--<Agent-Class>com.agent.AgentRedefineClasses</Agent-Class>-->
                             <!--<Agent-Class>com.agent.AgentAppendSystemClassLoader</Agent-Class>-->
                             <!--<Agent-Class>com.agent.AgentTransformer</Agent-Class>-->
-                            <Agent-Class>com.agent.AgentAddAnonymousInnerClass</Agent-Class>
+                            <Agent-Class>com.metis.agent.AgentAddAnonymousInnerClass</Agent-Class>
                             <!-- 是否可以重新转换类 -->
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                             <!-- 是否可以重新定义类 -->

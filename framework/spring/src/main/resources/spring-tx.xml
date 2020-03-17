@@ -44,7 +44,7 @@
 
     <!-- 5.aop -->
     <aop:config>
-        <aop:pointcut id="pointcut" expression="execution(* spring.aop.advisor.*.*(..))"/>
+        <aop:pointcut id="pointcut" expression="execution(* com.metis.spring.aop.advisor.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
     </aop:config>
 
