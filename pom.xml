@@ -53,6 +53,8 @@
     <modules>
         <module>base</module>
         <module>framework</module>
+        <module>spring</module>
+        <!--<module>spring-cloud</module>-->
         <module>hotswap</module>
         <module>hotswap/hostswap-agent</module>
         <module>some-function</module>
