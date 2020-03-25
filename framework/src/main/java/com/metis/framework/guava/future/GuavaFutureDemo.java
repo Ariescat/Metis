@@ -1,6 +1,7 @@
 package com.metis.framework.guava.future;
 
 import com.google.common.util.concurrent.*;
+import com.metis.framework.Logger;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -152,9 +153,4 @@ public class GuavaFutureDemo {
         });
     }
 
-    static class Logger {
-        static void info(String msg) {
-            System.out.println(msg);
-        }
-    }
 }
