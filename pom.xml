@@ -58,6 +58,7 @@
         <module>hotswap</module>
         <module>hotswap/hostswap-agent</module>
         <module>some-function</module>
+        <module>algorithm</module>
     </modules>
 
     <dependencyManagement>
