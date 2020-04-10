@@ -14,6 +14,9 @@ import java.util.Set;
  */
 public class Test {
 
+    /**
+     * See https://ariescat.github.io/2020/03/12/%E5%85%B3%E4%BA%8EGson%E7%9A%84%E5%87%A0%E4%B8%AA%E5%9D%91
+     */
     public static void main(String[] args) {
 
         HashMap<Integer, MagicCircleItem> hashMap = new HashMap<Integer, MagicCircleItem>() {
@@ -61,6 +64,7 @@ public class Test {
 
     interface A {
         int getA();
+
         int getB();
     }
 }

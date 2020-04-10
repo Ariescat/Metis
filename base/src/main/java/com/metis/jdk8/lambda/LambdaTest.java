@@ -18,7 +18,7 @@ public class LambdaTest {
      * {@link LambdaMetafactory#metafactory }
      * {@link java.lang.invoke.ConstantCallSite#dynamicInvoker() }
      *
-     * {@see https://zhuanlan.zhihu.com/p/39215520 }
+     * See https://zhuanlan.zhihu.com/p/39215520
      *
      * 总结：动态调用点的 调用的方法 是 java.lang.invoke.LambdaMetafactory.metafactory 帮我们生成的
      *      函数非常简单，只有两行代码，真正创建动态调用点的地方在 mf.buildCallSite 方法中，主要做了三件事：

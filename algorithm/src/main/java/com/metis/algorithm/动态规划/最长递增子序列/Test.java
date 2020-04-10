@@ -22,7 +22,7 @@ public class Test {
     }
 
     /**
-     * @see https://blog.csdn.net/mc695192383/article/details/70146579
+     * See https://blog.csdn.net/mc695192383/article/details/70146579
      */
     private static int[] forward(List<Integer> list) {
         int[] dp = new int[list.size()];
