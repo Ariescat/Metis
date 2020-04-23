@@ -80,6 +80,7 @@
                 <systemPath>${java.home}/../lib/tools.jar</systemPath>
             </dependency>
 
+            <!--metis-base-->
             <dependency>
                 <groupId>com.metis</groupId>
                 <artifactId>base</artifactId>
@@ -123,18 +124,28 @@
                 <version>${spring.version}</version>
             </dependency>
 
+            <!--cglib-->
             <dependency>
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
                 <version>3.2.10</version>
             </dependency>
 
+            <!--javassist-->
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
                 <version>3.20.0-GA</version>
             </dependency>
 
+            <!--quartz-->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+
+            <!--json-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
@@ -215,18 +226,6 @@
                 </exclusions>
             </dependency>
 
-            <dependency>
-                <groupId>org.codehaus.groovy</groupId>
-                <artifactId>groovy</artifactId>
-                <version>2.5.6</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>2.3.1</version>
-            </dependency>
-
             <!--原始类型库koloboke-->
             <dependency>
                 <groupId>com.koloboke</groupId>
@@ -239,25 +238,37 @@
                 <version>1.0.0</version>
             </dependency>
 
+            <!--redis-->
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>3.1.0</version>
             </dependency>
 
-            <!--lombok-->
+            <!--dubbo-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>2.7.0</version>
+            </dependency>
+
+            <!--others-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.8</version>
                 <scope>provided</scope>
             </dependency>
-
-            <!--others-->
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy</artifactId>
+                <version>2.5.6</version>
+            </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>20.0</version>
+                <version>28.2-jre</version>
+                <!--<version>20.0</version>-->
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>

@@ -2,6 +2,9 @@ package com.metis.groovy.withJava;
 
 import com.metis.base.math.round.Main;
 
+/**
+ * See /GTestGroovy2.java
+ */
 public class TestGroovy2 implements ITestGroovy2 {
 
     @Override
