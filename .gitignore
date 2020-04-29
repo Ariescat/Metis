@@ -2,6 +2,9 @@ _site
 .sass-cache
 .jekyll-metadata
 
-.idea/
-*/target/
+# Compiled class file
+*.class
+/target/
 
+# idea Files
+.idea/*
