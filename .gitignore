@@ -3,8 +3,7 @@ _site
 .jekyll-metadata
 
 # Compiled class file
-*.class
-/target/
+*/target/
 
 # idea Files
 .idea/*
