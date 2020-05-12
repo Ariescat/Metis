@@ -35,7 +35,12 @@
 
 * 2020.05
   * 05 spring boot
+  
   * 07 spring @Aspect 解析
+  
+  * 12 windforce
+  
+    ​		StatTree，fastjson解析FakeEnum
 
 #### 随笔
 
