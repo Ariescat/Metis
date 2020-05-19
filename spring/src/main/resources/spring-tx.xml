@@ -28,6 +28,14 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <!--
+        这里开启自动注解 会扫描@Transactional注解，有空看看解析原理 AnnotationDrivenBeanDefinitionParser
+
+        核心注册 InfrastructureAdvisorAutoProxyCreator
+        和AOP差不多的原理，会在 postProcessAfterInitialization 里进行处理
+    -->
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
     <!-- 4.txAdvice -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
