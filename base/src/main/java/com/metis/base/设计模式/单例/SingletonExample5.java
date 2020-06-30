@@ -23,21 +23,21 @@ public class SingletonExample5 {
     // 定义单例对象，至少保证有一个对象被创建的。
     // 单例对象 volatile + 双重检测机制 -> 禁止指令重排
     // volatile适用场景做状态标识量、双重检测，此处就是volatile的双重检测使用场景。
-    private volatile static SingletonExample5 singletonExample4 = null;
+    private volatile static SingletonExample5 singletonExample5 = null;
 
     // 静态工厂方法
     public static SingletonExample5 getInstance() {
         // 双重检测机制
-        if (singletonExample4 == null) {
+        if (singletonExample5 == null) {
             // 同步锁，判断对象不为空以后，锁着SingletonExample4类
             // synchronized修饰的内部，同一时间只能由一个线程可以访问的。
             synchronized (SingletonExample5.class) {
                 // 再次进行判断，如果singletonExample4为空，就进行创建对象。
-                if (singletonExample4 == null) {
-                    singletonExample4 = new SingletonExample5();
+                if (singletonExample5 == null) {
+                    singletonExample5 = new SingletonExample5();
                 }
             }
         }
-        return singletonExample4;
+        return singletonExample5;
     }
 }
