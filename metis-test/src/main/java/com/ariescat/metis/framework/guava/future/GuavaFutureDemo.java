@@ -1,7 +1,7 @@
 package com.ariescat.metis.framework.guava.future;
 
-import com.google.common.util.concurrent.*;
 import com.ariescat.metis.utils.Logger;
+import com.google.common.util.concurrent.*;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -135,7 +135,7 @@ public class GuavaFutureDemo {
             public void onFailure(Throwable t) {
                 Logger.info("烧水失败，没有茶喝了");
             }
-        });
+        }, MoreExecutors.directExecutor());
         //提交清洗的业务逻辑，取到异步任务
 
         ListenableFuture<Boolean> washFuture = gPool.submit(washJob);
@@ -150,7 +150,7 @@ public class GuavaFutureDemo {
             public void onFailure(Throwable t) {
                 Logger.info("杯子洗不了，没有茶喝了");
             }
-        });
+        }, MoreExecutors.directExecutor());
     }
 
 }
