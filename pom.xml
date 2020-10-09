@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <name>root</name>
-    <groupId>com.metis</groupId>
-    <artifactId>study</artifactId>
+    <name>metis</name>
+    <groupId>com.ariescat</groupId>
+    <artifactId>metis</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -31,7 +31,18 @@
             </releases>
             <!-- 是否开启快照版构件下载 -->
             <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>maven-net-cn</id>
+            <name>Maven China Mirror</name>
+            <url>http://maven.net.cn/content/groups/public/</url>
+            <releases>
                 <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
             </snapshots>
         </repository>
     </repositories>
@@ -51,14 +62,12 @@
     </build>
 
     <modules>
-        <module>base</module>
-        <module>framework</module>
-        <module>spring</module>
-        <module>spring-cloud</module>
-        <module>hotswap</module>
-        <module>hotswap/hostswap-agent</module>
-        <module>some-function</module>
-        <module>algorithm</module>
+        <module>metis-test</module>
+        <module>metis-algorithm</module>
+        <module>metis-spring</module>
+        <module>metis-hotswap</module>
+        <module>metis-functions</module>
+        <module>metis-daily-records</module>
     </modules>
 
     <dependencyManagement>
@@ -78,13 +87,6 @@
                 <version>1.8</version>
                 <scope>system</scope>
                 <systemPath>${java.home}/../lib/tools.jar</systemPath>
-            </dependency>
-
-            <!--metis-base-->
-            <dependency>
-                <groupId>com.metis</groupId>
-                <artifactId>base</artifactId>
-                <version>${project.version}</version>
             </dependency>
 
             <!--spring-->

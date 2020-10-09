@@ -1,0 +1,1 @@
+执行maven的package命令可以打出jar包

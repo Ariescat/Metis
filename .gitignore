@@ -6,5 +6,5 @@ _site
 */target/
 
 # idea Files
-.idea/*
+*/.idea/*
 *.iml

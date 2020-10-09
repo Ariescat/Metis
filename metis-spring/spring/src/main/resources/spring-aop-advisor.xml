@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   				       http://www.springframework.org/schema/aop
+						   http://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+    <bean id="human" class="com.ariescat.metis.spring.aop.advisor.Human"/>
+
+    <!--定义<aop:advisor>中引用的通知时，通知必须实现Advice接口，可以看这个类的继承结构-->
+    <bean id="sleepHelper" class="com.ariescat.metis.spring.aop.advisor.SleepHelper"/>
+    <aop:config>
+        <aop:pointcut expression="execution(* *.sleep(..))" id="sleepPointcut"/>
+        <aop:advisor advice-ref="sleepHelper" pointcut-ref="sleepPointcut"/>
+    </aop:config>
+
+
+</beans>
