@@ -1,4 +1,4 @@
-package com.ariescat.metis.framework.guava.future;
+package com.ariescat.metis.framework.guava.util.concurrent;
 
 import com.ariescat.metis.utils.Logger;
 import com.google.common.util.concurrent.*;

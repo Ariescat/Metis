@@ -1,4 +1,4 @@
-package com.ariescat.metis.framework.guava.immutable;
+package com.ariescat.metis.framework.guava.collect;
 
 import com.google.common.collect.ImmutableMap;
 

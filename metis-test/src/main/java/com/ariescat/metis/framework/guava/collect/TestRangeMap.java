@@ -1,12 +1,11 @@
-package com.ariescat.metis.framework.guava.rangeMap;
+package com.ariescat.metis.framework.guava.collect;
 
 import com.google.common.collect.ImmutableRangeMap;
 import com.google.common.collect.Range;
 import com.google.common.collect.RangeMap;
 import com.google.common.collect.TreeRangeMap;
-import com.ariescat.metis.framework.guava.immutable.TestImmutableMap;
 
-public class Main {
+public class TestRangeMap {
 
 
     public static void main(String[] args) {
