@@ -8,6 +8,12 @@ import com.google.common.primitives.UnsignedInts;
  */
 public class TestUnsignedInts {
 
+    /**
+     * 我理解其思想是：
+     * 无符号数       有符号数
+     * 21亿-42亿  ->  0-21亿
+     * 0-21亿    ->  -21亿-0
+     */
     public static void main(String[] args) {
         int min = UnsignedInts.min(0xffff_ffff, 0xffff_fffe, 0xffff_fff1, 1, 5);
 //                                        0x7fff_ffff, 0x7fff_fffe, 0x7fff_fff1, 0x8000_0001, 0x8000_0005);
