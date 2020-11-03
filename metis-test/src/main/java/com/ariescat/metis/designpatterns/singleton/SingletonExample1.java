@@ -1,4 +1,4 @@
-package com.ariescat.metis.base.单例;
+package com.ariescat.metis.designpatterns.singleton;
 
 import net.jcip.annotations.NotThreadSafe;
 
