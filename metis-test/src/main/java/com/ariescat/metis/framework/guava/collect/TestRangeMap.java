@@ -19,6 +19,7 @@ public class TestRangeMap {
      *
      * @see TestImmutableMap#main 看到这里了，顺便看看ImmutableMap吧
      */
+    @SuppressWarnings("UnstableApiUsage")
     private static void testImmutableRangeMap() {
         ImmutableRangeMap.Builder<Comparable<Integer>, Integer> builder = ImmutableRangeMap.builder();
         builder.put(Range.closed(1, 3), 444);
@@ -33,6 +34,7 @@ public class TestRangeMap {
     /**
      * TreeRangeMap 由TreeMap的NavigableMap实现
      */
+    @SuppressWarnings("UnstableApiUsage")
     public static void testTreeMap() {
         RangeMap<Integer, Integer> rangeMap = TreeRangeMap.create();
         rangeMap.put(Range.closed(1, 3), 111);
