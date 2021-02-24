@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Ariescat
  * @version 2020/3/18 14:43
  */
-public class Test {
+public class LocalDateTimeTest {
 
     public static void main(String[] args) {
         System.err.println(Instant.now());
