@@ -19,13 +19,13 @@ public class Message implements Delayed {
 
     @Override
     public int compareTo(Delayed delayed) {
-        Message message = (Message) delayed;
-        return this.exceptTime > message.getExceptTime() ? 1 : 0;
+//        Message message = (Message) delayed;
+//        return this.exceptTime > message.getExceptTime() ? 1 : 0;
+        return (int) (getDelay(TimeUnit.MILLISECONDS) - delayed.getDelay(TimeUnit.MILLISECONDS));
     }
 
     @Override
     public long getDelay(TimeUnit unit) {
-        System.out.println(exceptTime - System.currentTimeMillis());
         return unit.convert(exceptTime - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
     }
 
@@ -62,5 +62,13 @@ public class Message implements Delayed {
         this.exceptTime = exceptTime;
     }
 
-
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", delay=" + delay +
+                ", exceptTime=" + exceptTime +
+                '}';
+    }
 }
