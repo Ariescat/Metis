@@ -38,7 +38,7 @@ package com.ariescat.metis.leetcode;
  * @author Ariescat
  * @version 2020/8/17 18:07
  */
-public class Main110 {
+public class Main_0110_平衡二叉树 {
 
     public static void main(String[] args) {
 

@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 给定一个字符串 s，计算具有相同数量0和1的非空(连续)子字符串的数量，并且这些子字符串中的所有0和所有1都是组合在一起的。
+ * 696. 计数二进制子串
+ * 给定一个字符串 s，计算具有相同数量 0 和 1 的非空（连续）子字符串的数量，并且这些子字符串中的所有 0 和所有 1 都是连续的。
  *
  * 重复出现的子串要计算它们出现的次数。
+ *
+ *
  *
  * 示例 1 :
  *
@@ -22,22 +25,19 @@ import java.util.List;
  * 输入: "10101"
  * 输出: 4
  * 解释: 有4个子串：“10”，“01”，“10”，“01”，它们具有相同数量的连续1和0。
- * 注意：
  *
- * s.length 在1到50,000之间。
- * s 只包含“0”或“1”字符。
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/count-binary-substrings
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * 提示：
  *
- * @author Ariescat
- * @version 2020/8/10 10:32
+ * s.length 在1到50,000之间。
+ * s 只包含“0”或“1”字符。
+ *
+ * https://leetcode-cn.com/problems/count-binary-substrings/
  */
-public class Main696 {
+public class Main_0696_计数二进制子串 {
 
     public static void main(String[] args) {
-        Main696 main = new Main696();
+        Main_0696_计数二进制子串 main = new Main_0696_计数二进制子串();
         System.err.println(main.countBinarySubstrings("00110011"));
         System.err.println(main.countBinarySubstrings("10101"));
 

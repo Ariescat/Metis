@@ -21,7 +21,7 @@ package com.ariescat.metis.leetcode;
  * @author Ariescat
  * @version 2020/8/18 16:24
  */
-public class Main109 {
+public class Main_0109_有序链表转换二叉搜索树 {
 
     public TreeNode sortedListToBST(ListNode head) {
         return buildTree(head, null);
