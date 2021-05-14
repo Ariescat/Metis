@@ -1,4 +1,4 @@
-package com.ariescat.metis.base.sort;
+package com.ariescat.metis.algorithm.sort;
 
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Iterators;
