@@ -1,5 +1,7 @@
 package com.ariescat.metis.leetcode;
 
+import com.ariescat.metis.leetcode.utils.TreeNode;
+
 /**
  * 给定一个二叉树，判断它是否是高度平衡的二叉树。
  * <p>
@@ -57,19 +59,6 @@ public class Main_0110_平衡二叉树 {
             return 0;
         } else {
             return Math.max(height(root.left), height(root.right)) + 1;
-        }
-    }
-
-    /**
-     * Definition for a binary tree node.
-     */
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
         }
     }
 }

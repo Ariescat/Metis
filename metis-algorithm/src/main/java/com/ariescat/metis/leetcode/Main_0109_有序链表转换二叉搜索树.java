@@ -1,5 +1,8 @@
 package com.ariescat.metis.leetcode;
 
+import com.ariescat.metis.leetcode.utils.ListNode;
+import com.ariescat.metis.leetcode.utils.TreeNode;
+
 /**
  * 109. 有序链表转换二叉搜索树
  * 给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
@@ -48,47 +51,5 @@ public class Main_0109_有序链表转换二叉搜索树 {
             slow = slow.next;
         }
         return slow;
-    }
-
-    /**
-     * Definition for singly-linked list.
-     */
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
-    /**
-     * Definition for a binary tree node.
-     */
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

@@ -1,5 +1,7 @@
 package com.ariescat.metis.leetcode;
 
+import com.ariescat.metis.leetcode.utils.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,25 +44,6 @@ public class Main_0872_叶子相似的树 {
         }
         if (root.right != null) {
             fill(root.right, arr);
-        }
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 }

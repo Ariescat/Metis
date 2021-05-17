@@ -1,5 +1,7 @@
 package com.ariescat.metis.leetcode;
 
+import com.ariescat.metis.leetcode.utils.ListNode;
+
 /**
  * 临时测试类
  */
@@ -108,22 +110,5 @@ public class Main_0002_两数相加 {
             next.next = new ListNode(alter);
         }
         return first;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
