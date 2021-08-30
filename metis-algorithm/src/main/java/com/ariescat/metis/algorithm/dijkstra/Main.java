@@ -10,6 +10,9 @@ package com.ariescat.metis.algorithm.dijkstra;
  *      Floyd他这里的描述有点晦涩难懂，可以先看看这两篇：
  *          原理：https://www.cnblogs.com/wangyuliang/p/9216365.html
  *          路径查找：https://www.jianshu.com/p/f73c7a6f5a53
+ *      Bellman-Ford：主要是它可以检测负权回路
+ *          https://www.cnblogs.com/xzxl/p/7232929.html
+ *          https://blog.csdn.net/zhouzi2018/article/details/81564593
  * </pre>
  *
  * @author Ariescat
