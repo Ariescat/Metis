@@ -64,7 +64,7 @@
     <modules>
         <module>metis-test</module>
         <module>metis-algorithm</module>
-        <module>metis-spring</module>
+        <!--<module>metis-spring</module>-->
         <module>metis-hotswap</module>
         <module>metis-functions</module>
         <module>metis-daily-records</module>
