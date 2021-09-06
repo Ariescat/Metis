@@ -3,6 +3,18 @@ package com.ariescat.metis.algorithm.dijkstra;
 /**
  * 最短路径算法
  *
+ * <pre>
+ * 2021年8月25日补充：
+ * 这篇文章讲的挺好的，C++的代码不要怕去看，https://blog.csdn.net/qq_35644234/article/details/60870719
+ * 还可以拓展了解一下 Floyd算法 和 SPFA(Bellman-Ford)算法
+ *      Floyd他这里的描述有点晦涩难懂，可以先看看这两篇：
+ *          原理：https://www.cnblogs.com/wangyuliang/p/9216365.html
+ *          路径查找：https://www.jianshu.com/p/f73c7a6f5a53
+ *      Bellman-Ford：主要是它可以检测负权回路
+ *          https://www.cnblogs.com/xzxl/p/7232929.html
+ *          https://blog.csdn.net/zhouzi2018/article/details/81564593
+ * </pre>
+ *
  * @author Ariescat
  * @version 2020/4/9 14:43
  */
