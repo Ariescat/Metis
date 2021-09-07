@@ -20,5 +20,11 @@ public class Test {
          */
         System.err.println(new BigInteger(new byte[]{3, 2, 3}));
         System.err.println(3 * 256 * 256 + 2 * 256 + 3);
+
+        int a =100,b=50,c=a---b,d=a---b;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
     }
 }
