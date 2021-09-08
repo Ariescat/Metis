@@ -15,6 +15,8 @@ public class Main_0470_用Rand7实现Rand10 {
         test_randN(Main_0470_用Rand7实现Rand10::rand10);
         System.err.println("test_rand7:");
         test_randN(Main_0470_用Rand7实现Rand10::_rand7_);
+        System.err.println("test_rand10_2:");
+        test_randN(Main_0470_用Rand7实现Rand10::rand10_from_8);
     }
 
     private static void test_randN(Supplier<Integer> supplier) {
@@ -31,6 +33,8 @@ public class Main_0470_用Rand7实现Rand10 {
             System.err.println(entry.getKey() + " -- > " + entry.getValue());
         }
     }
+
+    // -----------------------------------------------------------------------------------------------
 
     /**
      * 从 rand7() 到 rand10()
@@ -50,6 +54,23 @@ public class Main_0470_用Rand7实现Rand10 {
     private static int rand7() {
         return ThreadLocalRandom.current().nextInt(1, 8);
     }
+
+    // -----------------------------------------------------------------------------------------------
+
+    public static int rand10_from_8() {
+        int num = (rand8() - 1) * 8 + rand8();
+        // 0  1  2  3  4  5  6  7
+        // 0  8 16 26 32 40 48 56  +  1  2  3  4  5  6  7  8
+        while (num > 60)
+            num = (rand8() - 1) * 8 + rand8();
+        return 1 + num % 10;
+    }
+
+    private static int rand8() {
+        return ThreadLocalRandom.current().nextInt(1, 9);
+    }
+
+    // -----------------------------------------------------------------------------------------------
 
     /**
      * 从 rand10() 到 rand7()
