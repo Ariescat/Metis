@@ -20,6 +20,5 @@
     <modules>
         <module>hotswap-code</module>
         <module>hotswap-agent</module>
-        <module>groovy</module>
     </modules>
 </project>

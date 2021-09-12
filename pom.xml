@@ -12,11 +12,12 @@
 
     <modules>
         <module>metis-java</module>
+        <module>metis-groovy</module>
         <module>metis-algorithm</module>
         <module>metis-algorithm-leetcode</module>
-        <!--<module>metis-spring</module>-->
         <module>metis-functions</module>
         <module>metis-hotswap</module>
+        <!--<module>metis-spring</module>-->
     </modules>
 
     <properties>
