@@ -10,6 +10,15 @@
     <artifactId>metis</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>metis-java</module>
+        <module>metis-algorithm</module>
+        <module>metis-algorithm-leetcode</module>
+        <!--<module>metis-spring</module>-->
+        <module>metis-functions</module>
+        <module>metis-hotswap</module>
+    </modules>
+
     <properties>
         <project.encoding>UTF-8</project.encoding>
         <project.version>1.0-SNAPSHOT</project.version>
@@ -18,7 +27,6 @@
         <slf4j.version>1.7.5</slf4j.version>
         <log4j.version>2.13.3</log4j.version>
     </properties>
-
     <repositories>
         <repository>
             <id>central</id>
@@ -46,7 +54,6 @@
             </snapshots>
         </repository>
     </repositories>
-
     <build>
         <plugins>
             <plugin>
@@ -60,14 +67,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <modules>
-        <module>metis-test</module>
-        <module>metis-algorithm</module>
-        <!--<module>metis-spring</module>-->
-        <module>metis-hotswap</module>
-        <module>metis-functions</module>
-    </modules>
 
     <dependencyManagement>
         <dependencies>
