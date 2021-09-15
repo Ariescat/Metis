@@ -1,13 +1,5 @@
 # Metis
 
-本工程是一系列**算法、代码、工具、功能、框架**的用法与使用心得，Metis 这个名字取自希腊神话中的智慧女神墨提斯。
-
-
-
-metis-algorithm-leetcode：leetcode日常
-
-metis-algorithm：算法归档
-
 metis-java：java的基础功能
 
 metis-groovy：groovy测试
@@ -18,10 +10,22 @@ metis-hotswap：一些热更的测试
 
 metis-spring：spring用例
 
+<br>
 
 
-### 其他子项目
 
-[Metis-Mall](https://github.com/Ariescat/Metis-Mall.git) ：分布式电商商城
+### Metis 项目列表
 
-[Metis-Seckill](https://github.com/Ariescat/Metis-Seckill.git)：电商秒杀
+Metis 工程是一系列**算法、代码、工具、功能、框架**的用法与使用心得，**Metis** 这个名字取自希腊神话中的智慧女神**墨提斯**。
+
+[Metis](https://github.com/Ariescat/Metis)：功能测试，用例
+
+[Metis-Awesome](https://github.com/Ariescat/Metis-Awesome)：总结（秃头区）
+
+[Metis-DailyRecords](https://github.com/Ariescat/Metis-DailyRecords)：随笔（private，非开放）
+
+[Metis-Leetcode](https://github.com/Ariescat/Metis-Mall) ：leetcode日常解题
+
+[Metis-Mall](https://github.com/Ariescat/Metis-Mall) ：分布式电商商城练习
+
+[Metis-Seckill](https://github.com/Ariescat/Metis-Seckill)：电商秒杀练习
