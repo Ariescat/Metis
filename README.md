@@ -20,11 +20,11 @@ Metis 工程是一系列**算法、代码、工具、功能、框架**的用法�
 
 [Metis](https://github.com/Ariescat/Metis)：功能测试，用例
 
-[Metis-Awesome](https://github.com/Ariescat/Metis-Awesome)：总结（秃头区）
+[Metis-Awesome](https://github.com/Ariescat/Metis-Awesome)：总结（头秃区）
 
 [Metis-DailyRecords](https://github.com/Ariescat/Metis-DailyRecords)：随笔（private，非开放）
 
-[Metis-Leetcode](https://github.com/Ariescat/Metis-Mall) ：leetcode日常解题
+[Metis-Leetcode](https://github.com/Ariescat/Metis-Leetcode) ：leetcode 日常解题
 
 [Metis-Mall](https://github.com/Ariescat/Metis-Mall) ：分布式电商商城练习
 
