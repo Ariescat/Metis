@@ -18,11 +18,11 @@ metis-spring：spring用例
 
 Metis 工程是一系列**算法、代码、工具、功能、框架**的用法与使用心得，**Metis** 这个名字取自希腊神话中的智慧女神**墨提斯**。
 
-[Metis](https://github.com/Ariescat/Metis)：功能测试，用例
+[Metis](https://github.com/Ariescat/Metis)：功能测试，用例（**也就是本工程**）
 
-[Metis-Awesome](https://github.com/Ariescat/Metis-Awesome)：总结（头秃区）
+[Metis-Awesome](https://github.com/Ariescat/Metis-Awesome)：笔记总结
 
-[Metis-DailyRecords](https://github.com/Ariescat/Metis-DailyRecords)：随笔（private，非开放）
+[Metis-DailyRecords](https://github.com/Ariescat/Metis-DailyRecords)：随笔（private，个人使用）
 
 [Metis-Leetcode](https://github.com/Ariescat/Metis-Leetcode) ：leetcode 日常解题
 
