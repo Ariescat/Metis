@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.jdk;
+package com.ariescat.metis.java.clazz;
 
 /**
  * @link https://blog.csdn.net/qq_36382679/article/details/105811529

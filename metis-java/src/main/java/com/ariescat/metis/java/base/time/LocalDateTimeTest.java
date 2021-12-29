@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.time;
+package com.ariescat.metis.java.base.time;
 
 import java.time.Instant;
 import java.time.LocalDateTime;

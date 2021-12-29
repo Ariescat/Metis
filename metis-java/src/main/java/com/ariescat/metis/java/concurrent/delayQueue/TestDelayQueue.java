@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.jdk.concurrent.delayQueue;
+package com.ariescat.metis.java.concurrent.delayQueue;
 
 import java.util.Random;
 import java.util.concurrent.DelayQueue;

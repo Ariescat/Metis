@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.math.bigdecimal;
+package com.ariescat.metis.java.base.math.bigdecimal;
 
 import java.math.BigDecimal;
 

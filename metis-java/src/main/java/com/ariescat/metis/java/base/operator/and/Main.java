@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.operator.and;
+package com.ariescat.metis.java.base.operator.and;
 
 /**
  * 数据结构与算法中有那些奇技淫巧？

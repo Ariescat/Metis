@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.jdk;
+package com.ariescat.metis.java.clazz;
 
 public class TestAnonymousClass {
 

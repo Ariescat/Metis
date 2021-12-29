@@ -1,4 +1,4 @@
-package com.ariescat.metis.java.string;
+package com.ariescat.metis.java.base.string;
 
 /**
  * @author Ariescat
