@@ -2,11 +2,7 @@
 
 metis-java：java的基础功能
 
-metis-groovy：groovy测试
-
 metis-functions：一些功能，如行为树，抢红包等
-
-metis-hotswap：一些热更的测试
 
 metis-spring：spring用例
 
